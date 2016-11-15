@@ -1,0 +1,38 @@
+public class LuchaNamer {
+	public static void main (String[] args) {
+
+	//Word Lists for Luchador Names
+
+	String[] luchaFirstName = {"Eddie" , "Rey", "Alberto", "Sin", "Kalisto",
+				"Blue Demon", "Mascarita" , "Matanza", "Mil", "Pentagon"
+				  };
+	String[] luchaMiddleName = {"Mack", "Mysterio", "Guerrero", "Cueto", "Cara",
+				"Cuerno", "Jr.", "Puma", "Azteca", "Muertes"
+				   };
+	String[] luchaLastName = {"Mascaras", "Prince" , "Asesino", "InsertSpanish", "Vampiro"
+				            ,"Rodriguez", "Santos", "Bradshaw", "Machina", "Cigar"
+				 };
+	String[] luchaLocation = {"Mexico City", "Sao Paulo", "Buenos Aires", "Caracas", "Infra Mundo",
+				"Lima", "Santiago", "Bogota","Guadalajara", "Brasilia", "Havan",
+				"Santo Domingo"
+				 };
+	//calculates how many words are in each list
+	int firstLength = luchaFirstName.length;
+	int secondLength = luchaMiddleName.length;
+	int thirdLength = luchaLastName.length;
+	int locLength = luchaLocation.length;
+	//Generates 3 random numbers
+	int r1 = (int) (Math.random() * firstLength);
+	int r2 = (int) (Math.random() * secondLength);
+	int r3 = (int) (Math.random() * thirdLength);
+	int r4 = (int) (Math.random() * locLength);
+	//Builds the Luchador Name
+	String nombre = luchaFirstName [r1] + " " +
+	luchaMiddleName [r2] + " " + luchaLastName [r3];
+
+	
+	//Prints out Luchador's Name!
+	System.out.println("INTRODUCING,FROM " + luchaLocation [r4] + ", " + nombre + "!");
+	}
+}	
+
